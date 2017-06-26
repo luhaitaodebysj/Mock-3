@@ -1,5 +1,4 @@
 <template>
-222
     <div class="left" :style="{'height':win_size.height,'width':$store.state.leftmenu.width}" id='admin-left'>
         <div id='left-menu'>
             <el-row class='tac'
