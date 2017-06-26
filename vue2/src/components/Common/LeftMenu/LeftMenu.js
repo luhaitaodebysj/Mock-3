@@ -2,42 +2,39 @@ export default {
   name: 'left-menu',
   data() {
     return {
-      menu_list: [],
-      win_size: {
-        height: '',
-      },
       data: [{
-        label: '一级 1',
+        label: '项目列表',
         children: [{
-          label: '二级 1-1',
+          label: '项目1',
           children: [{
-            label: '三级 1-1-1'
-          }]
-        }]
-      }, {
-        label: '一级 2',
-        children: [{
-          label: '二级 2-1',
-          children: [{
-            label: '三级 2-1-1'
+            label: '页面列表1',
+            children: [{
+              label: '接口1',
+            },{
+              label: '接口2'
+            },{
+              label: '接口3'
+            }, {
+              label: '接口4'
+            }
+            ]
+          }, {
+            label: '页面列表2'
+          }, {
+            label: '页面列表3'
+          }, {
+            label: '页面列表4'
           }]
         }, {
-          label: '二级 2-2',
+          label: '项目2',
           children: [{
-            label: '三级 2-2-1'
-          }]
-        }]
-      }, {
-        label: '一级 3',
-        children: [{
-          label: '二级 3-1',
-          children: [{
-            label: '三级 3-1-1'
-          }]
-        }, {
-          label: '二级 3-2',
-          children: [{
-            label: '三级 3-2-1'
+            label: '页面列表1'
+          }, {
+            label: '页面列表2'
+          }, {
+            label: '页面列表3'
+          }, {
+            label: '页面列表4'
           }]
         }]
       }],
