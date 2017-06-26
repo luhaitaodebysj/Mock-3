@@ -1,54 +1,55 @@
-    export default {
-        name: 'left-menu',
-        data() {
-            return {
-                menu_list: [],
-                win_size: {
-                    height: '',
-                }
-            }
-        },
-        methods: {
-            setSize() {
-                this.win_size.height = $(window).height() + "px";
-            },
-            toggleMenu() {
-                this.$store.dispatch(this.$store.state.leftmenu.menu_flag ? 'set_menu_close' : 'set_menu_open');
-            },
-            updateCurMenu(route) {
-                var route = route || this.$route;
-                if (route.matched.length) {
-                    var rootPath = route.matched[0].path,
-                        fullPath = route.path;
-                    this.$store.dispatch('set_cur_route', {
-                        rootPath,
-                        fullPath
-                    });
-                    var routes = this.$router.options.routes;
-                    for (var i = 0; i < routes.length; i++) {
-                        if (routes[i].path === rootPath && !routes[i].hidden) {
-                            this.menu_list = routes[i].children;
-                            break;
-                        }
-                    }
-                } else {
-                    this.$router.push('/404');
-                }
-            }
-        },
-        created() {
-            this.setSize();
-            $(window).resize(() => {
-                this.setSize();
-            });
-            this.updateCurMenu();
-        },
-        mounted() {
-            // console.log(this.$store.state.user.userinfo.access);
-        },
-        watch: {
-            $route(to, from) {
-                this.updateCurMenu(to);
-            }
-        }
+export default {
+  name: 'left-menu',
+  data() {
+    return {
+      menu_list: [],
+      win_size: {
+        height: '',
+      },
+      data: [{
+        label: '一级 1',
+        children: [{
+          label: '二级 1-1',
+          children: [{
+            label: '三级 1-1-1'
+          }]
+        }]
+      }, {
+        label: '一级 2',
+        children: [{
+          label: '二级 2-1',
+          children: [{
+            label: '三级 2-1-1'
+          }]
+        }, {
+          label: '二级 2-2',
+          children: [{
+            label: '三级 2-2-1'
+          }]
+        }]
+      }, {
+        label: '一级 3',
+        children: [{
+          label: '二级 3-1',
+          children: [{
+            label: '三级 3-1-1'
+          }]
+        }, {
+          label: '二级 3-2',
+          children: [{
+            label: '三级 3-2-1'
+          }]
+        }]
+      }],
+      defaultProps: {
+        children: 'children',
+        label: 'label'
+      }
     }
+  },
+  methods: {
+    handleNodeClick: function () {
+      console.log(11111);
+    }
+  }
+}
