@@ -9,17 +9,25 @@ export default {
           children: [{
             label: '页面列表1',
             children: [{
+              id:1,
               label: '接口1',
             },{
+              id:2,
               label: '接口2'
             },{
+              id:3,
               label: '接口3'
             }, {
+              id:4,
               label: '接口4'
             }
             ]
           }, {
-            label: '页面列表2'
+            label: '页面列表2',
+            children:[{
+              id:5,
+              label:'333'
+            }]
           }, {
             label: '页面列表3'
           }, {
@@ -28,7 +36,10 @@ export default {
         }, {
           label: '项目2',
           children: [{
-            label: '页面列表1'
+            label: '页面列表1',
+            children:[{
+              label:'接口3'
+            }]
           }, {
             label: '页面列表2'
           }, {
@@ -45,8 +56,9 @@ export default {
     }
   },
   methods: {
-    handleNodeClick: function () {
-      console.log(11111);
+    handleNodeClick: function (obj) {
+      console.log(obj.id);
+      this.$router.push('/demo/mock');
     }
   }
 }

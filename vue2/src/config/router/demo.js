@@ -18,46 +18,19 @@ module.exports = [{
 		name: '项目管理',
 		icon: 'inbox',
 		component: Content,
-		// redirect: '/demo/user/list',
+		redirect: '/demo/user/list',
 		children: [{
 			path: 'list',
 			name: '项目列表',
 			icon: 'reorder',
 			component: Modules.Demo.User.List,
 		}
-		// , {
-		// 	path: 'edit',
-		// 	name: '创建接口',
-		// 	icon: 'edit',
-		// 	component: Modules.Demo.User.Edit
-		// }
-		// , {
-		// 	path: 'access',
-		// 	hidden:true,
-		// 	name: '设置权限',
-		// 	icon: 'edit',
-		// 	component: Modules.Demo.User.Access
-		// }
 		]
-	}
-	// , {
-	// 	path: 'article',
-	// 	name: '文章管理',
-	// 	icon: 'inbox',
-	// 	component: Content,
-	// 	redirect: '/demo/article/list',
-	// 	children: [{
-	// 		path: 'list',
-	// 		name: '文章列表',
-	// 		icon: 'reorder',
-	// 		component: Modules.Demo.Article.List
-	// 	}, {
-	// 		path: 'edit',
-	// 		name: '编辑文章',
-	// 		icon: 'edit',
-	// 		component: Modules.Demo.Article.Edit
-	// 	}]
-	// }
+	},{
+	  path:'mock',
+    name:'mock数据处理',
+    component: Modules.Demo.Mock,
+  }
 	// , {
 	// 	path: 'order',
 	// 	name: '订单管理',

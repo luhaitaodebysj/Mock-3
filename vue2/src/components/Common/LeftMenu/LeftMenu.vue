@@ -3,8 +3,11 @@
    <el-tree
   :data="data"
   :props="defaultProps"
+  node-key
+  highlight-current
+  ref="tree"
   accordion
-  @node-click="handleNodeClick">
+  @node-click="handleNodeClick($event)">
 </el-tree>
   </div>
 </template>

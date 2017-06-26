@@ -7,6 +7,7 @@ import router from './router/';
 import leftmenu from './leftmenu/';
 import user from './userinfo/';
 import global from './global/';
+import mock from './mock';
 
 module.exports = new Vuex.Store({
     modules: {
@@ -14,6 +15,7 @@ module.exports = new Vuex.Store({
         cart,
         router,
         leftmenu,
-        user
+        user,
+        mock
     }
 });
