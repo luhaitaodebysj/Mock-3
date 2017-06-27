@@ -7,7 +7,6 @@ import {
 } from 'util/';
 
 var api_methods={};
-
 for (var i = 0; i < request.length; i++) {
     if (typeof request[i]==='object' && request[i].list && Array.isArray(request[i].list)) {
         for(var j=0;j<request[i].list.length;j++){
@@ -18,6 +17,7 @@ for (var i = 0; i < request.length; i++) {
             })(i,j);
         }
     }
+    console.log(api_methods);
 }
 
 module.exports = {

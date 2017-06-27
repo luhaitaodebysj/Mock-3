@@ -23,6 +23,10 @@ var request=[{
 	module:'system',
 	name:'系统设置',
 	list:require('./request/system.js')
+},{
+  module:'mock',
+  name:'接口管理',
+  list:require('./request/mock.js')
 }];
 
 module.exports=request;

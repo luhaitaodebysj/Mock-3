@@ -17,6 +17,11 @@ Vue.use(Vuex);
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 
+// 引入 axios
+import Axios from 'axios';
+Vue.prototype.$http = Axios;
+
+
 
 // root component
 import App from './App';
